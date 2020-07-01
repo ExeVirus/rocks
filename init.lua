@@ -17,7 +17,7 @@ function register_rockset(name, recipe_cobble, recipe_stone, image)
     --stub
     
     ---Register the round rock
-    minetest.register_node("rocks:".. name .."_round", {
+    minetest.register_node("hd_rocks:".. name .."_round", {
         description = "Round " .. name .. " Rock",
         drawtype = "mesh",
         mesh = "round.obj",
@@ -45,7 +45,7 @@ function register_rockset(name, recipe_cobble, recipe_stone, image)
     })
     
     minetest.register_craft({
-        output = "rocks:".. name .."_round 1",
+        output = "hd_rocks:".. name .."_round 1",
         recipe = {
             {"",            recipe_cobble,  ""},
             {recipe_cobble, recipe_stone,   recipe_cobble},
@@ -54,7 +54,7 @@ function register_rockset(name, recipe_cobble, recipe_stone, image)
     })
     
     -- Now for pillar_90
-     minetest.register_node("rocks:".. name .."_pillar_90", {
+     minetest.register_node("hd_rocks:".. name .."_pillar_90", {
         description = name .. " Pillar 90",
         drawtype = "mesh",
         mesh = "pillar_90.obj",
@@ -83,7 +83,7 @@ function register_rockset(name, recipe_cobble, recipe_stone, image)
 
     
     minetest.register_craft({
-        output = "rocks:".. name .."_pillar_90 1",
+        output = "hd_rocks:".. name .."_pillar_90 1",
         recipe = {
             {"",    recipe_stone,   ""},
             {"",    recipe_cobble,  ""},
@@ -92,7 +92,7 @@ function register_rockset(name, recipe_cobble, recipe_stone, image)
     })
 
     -- Now for pillar_45
-     minetest.register_node("rocks:".. name .."_pillar_45", {
+     minetest.register_node("hd_rocks:".. name .."_pillar_45", {
         description = name .. " Pillar 45",
         drawtype = "mesh",
         mesh = "pillar_45.obj",
@@ -122,7 +122,7 @@ function register_rockset(name, recipe_cobble, recipe_stone, image)
 
     
     minetest.register_craft({
-        output = "rocks:".. name .."_pillar_45 1",
+        output = "hd_rocks:".. name .."_pillar_45 1",
         recipe = {
             {"",    "",             recipe_stone},
             {"",    recipe_cobble,  ""},
@@ -131,7 +131,7 @@ function register_rockset(name, recipe_cobble, recipe_stone, image)
     })
     
     -- Now for large_flat
-     minetest.register_node("rocks:".. name .."_large_flat", {
+     minetest.register_node("hd_rocks:".. name .."_large_flat", {
         description = "Large Flat ".. name .. " Rock",
         drawtype = "mesh",
         mesh = "large_flat.obj",
@@ -161,7 +161,7 @@ function register_rockset(name, recipe_cobble, recipe_stone, image)
 
     
     minetest.register_craft({
-        output = "rocks:".. name .."_large_flat 1",
+        output = "hd_rocks:".. name .."_large_flat 1",
         recipe = {
             {"",                "",              ""},
             {recipe_stone,      recipe_stone,    recipe_stone},
@@ -170,7 +170,7 @@ function register_rockset(name, recipe_cobble, recipe_stone, image)
     })
     
     -- Now for flat
-     minetest.register_node("rocks:".. name .."_flat", {
+     minetest.register_node("hd_rocks:".. name .."_flat", {
         description = "Flat ".. name .. " Rock",
         drawtype = "mesh",
         mesh = "flat.obj",
@@ -198,7 +198,7 @@ function register_rockset(name, recipe_cobble, recipe_stone, image)
 
     
     minetest.register_craft({
-        output = "rocks:".. name .."_flat 1",
+        output = "hd_rocks:".. name .."_flat 1",
         recipe = {
             {"",                "",              ""},
             {recipe_stone,      recipe_stone,    ""},
@@ -237,7 +237,7 @@ function register_rockset(name, recipe_cobble, recipe_stone, image)
 
     
     minetest.register_craft({
-        output = "rocks:".. name .."_glove 1",
+        output = "hd_rocks:".. name .."_glove 1",
         recipe = {
             {"",                "",              ""},
             {recipe_stone,      recipe_cobble,    recipe_stone},
@@ -246,7 +246,7 @@ function register_rockset(name, recipe_cobble, recipe_stone, image)
     })
     
     -- Now for spike
-    minetest.register_node("rocks:".. name .."_spike", {
+    minetest.register_node("hd_rocks:".. name .."_spike", {
         description =  name .. " Spike",
         drawtype = "mesh",
         mesh = "spike.obj",
@@ -277,7 +277,7 @@ function register_rockset(name, recipe_cobble, recipe_stone, image)
 
     
     minetest.register_craft({
-        output = "rocks:".. name .."_spike 1",
+        output = "hd_rocks:".. name .."_spike 1",
         recipe = {
             {"",                recipe_stone,              ""},
             {recipe_stone,      recipe_cobble,    recipe_stone},
@@ -286,7 +286,7 @@ function register_rockset(name, recipe_cobble, recipe_stone, image)
     })
     
     -- Now for stub
-    minetest.register_node("rocks:".. name .."_stub", {
+    minetest.register_node("hd_rocks:".. name .."_stub", {
         description =  name .. " Stub",
         drawtype = "mesh",
         mesh = "stub.obj",
@@ -315,7 +315,7 @@ function register_rockset(name, recipe_cobble, recipe_stone, image)
 
     
     minetest.register_craft({
-        output = "rocks:".. name .."_stub 1",
+        output = "hd_rocks:".. name .."_stub 1",
         recipe = {
             {"",                "",              ""},
             {"",                recipe_stone,    ""},
