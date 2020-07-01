@@ -1,3 +1,3 @@
-# HD Rocks
+# Rocks
 Minetest Rock Mod
 ![Screenshot](screenshot.png)
