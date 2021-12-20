@@ -2,8 +2,6 @@
 --Register Rockset does all the heavy lifting for the mod:
 
 --Name is the starting name of the rock: i.e. stone_pillar
--- Recipe_cobble and recipe_stone refer to the name of the nodes that will become hte crafting recipes
--- for this registered rockset. For sand, I reccomend sand + sandstone, etc.
 -- Image: this is a plain color image that best matches the color set you are going for
 function register_rockset(name, recipe_cobble, recipe_stone, image)
     --There are eight rocks to register:
@@ -44,15 +42,6 @@ function register_rockset(name, recipe_cobble, recipe_stone, image)
 
     })
     
-    minetest.register_craft({
-        output = "rocks:".. name .."_round 1",
-        recipe = {
-            {"",            recipe_cobble,  ""},
-            {recipe_cobble, recipe_stone,   recipe_cobble},
-            {"",            recipe_cobble,  ""},
-        },
-    })
-    
     -- Now for pillar_90
      minetest.register_node("rocks:".. name .."_pillar_90", {
         description = name .. " Pillar 90",
@@ -79,16 +68,6 @@ function register_rockset(name, recipe_cobble, recipe_stone, image)
         
         groups = { cracky=2 },
 
-    })
-
-    
-    minetest.register_craft({
-        output = "rocks:".. name .."_pillar_90 1",
-        recipe = {
-            {"",    recipe_stone,   ""},
-            {"",    recipe_cobble,  ""},
-            {"",    recipe_cobble,  ""},
-        },
     })
 
     -- Now for pillar_45
@@ -119,16 +98,6 @@ function register_rockset(name, recipe_cobble, recipe_stone, image)
         groups = { cracky=2 },
 
     })
-
-    
-    minetest.register_craft({
-        output = "rocks:".. name .."_pillar_45 1",
-        recipe = {
-            {"",    "",             recipe_stone},
-            {"",    recipe_cobble,  ""},
-            {"",    recipe_cobble,  ""},
-        },
-    })
     
     -- Now for large_flat
      minetest.register_node("rocks:".. name .."_large_flat", {
@@ -158,16 +127,6 @@ function register_rockset(name, recipe_cobble, recipe_stone, image)
         groups = { cracky=2 },
 
     })
-
-    
-    minetest.register_craft({
-        output = "rocks:".. name .."_large_flat 1",
-        recipe = {
-            {"",                "",              ""},
-            {recipe_stone,      recipe_stone,    recipe_stone},
-            {recipe_cobble,     recipe_cobble,   recipe_cobble},
-        },
-    })
     
     -- Now for flat
      minetest.register_node("rocks:".. name .."_flat", {
@@ -194,16 +153,6 @@ function register_rockset(name, recipe_cobble, recipe_stone, image)
         
         groups = { cracky=2 },
 
-    })
-
-    
-    minetest.register_craft({
-        output = "rocks:".. name .."_flat 1",
-        recipe = {
-            {"",                "",              ""},
-            {recipe_stone,      recipe_stone,    ""},
-            {recipe_cobble,     recipe_cobble,   ""},
-        },
     })
 
     -- Now for glove
@@ -233,16 +182,6 @@ function register_rockset(name, recipe_cobble, recipe_stone, image)
         
         groups = { cracky=2 },
 
-    })
-
-    
-    minetest.register_craft({
-        output = "rocks:".. name .."_glove 1",
-        recipe = {
-            {"",                "",              ""},
-            {recipe_stone,      recipe_cobble,    recipe_stone},
-            {"",     recipe_cobble,   ""},
-        },
     })
     
     -- Now for spike
@@ -274,16 +213,6 @@ function register_rockset(name, recipe_cobble, recipe_stone, image)
         groups = { cracky=2 },
 
     })
-
-    
-    minetest.register_craft({
-        output = "rocks:".. name .."_spike 1",
-        recipe = {
-            {"",                recipe_stone,              ""},
-            {recipe_stone,      recipe_cobble,    recipe_stone},
-            {recipe_cobble,     recipe_cobble,   recipe_cobble},
-        },
-    })
     
     -- Now for stub
     minetest.register_node("rocks:".. name .."_stub", {
@@ -313,22 +242,13 @@ function register_rockset(name, recipe_cobble, recipe_stone, image)
 
     })
 
-    
-    minetest.register_craft({
-        output = "rocks:".. name .."_stub 1",
-        recipe = {
-            {"",                "",              ""},
-            {"",                recipe_stone,    ""},
-            {recipe_cobble,     recipe_cobble,   recipe_cobble},
-        },
-    })
 end --End register_rockset function
 
 
---------------Default Rocks Registration -------
+--------------Rocks Registration -------
 
-register_rockset("stone", "default:cobble", "default:stone", "stone.png")
-register_rockset("desert_sand", "default:desert_sand", "default:desert_sandstone", "desert_sand.png")
-register_rockset("desert_stone", "default:desert_stone", "default:desert_cobble", "desert_stone.png")
-register_rockset("sand", "default:sand", "default:sandstone", "sand.png")
-register_rockset("silver_sand", "default:silver_sand", "default:silver_sandstone", "silver_sand.png")
+register_rockset("stone", "stone.png")
+register_rockset("desert_sand", "desert_sand.png")
+register_rockset("desert_stone", "desert_stone.png")
+register_rockset("sand", "sand.png")
+register_rockset("silver_sand", "silver_sand.png")
