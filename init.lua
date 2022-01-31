@@ -3,7 +3,7 @@
 
 --Name is the starting name of the rock: i.e. stone_pillar
 -- Image: this is a plain color image that best matches the color set you are going for
-function register_rockset(name, recipe_cobble, recipe_stone, image)
+function register_rockset(name, image)
     --There are eight rocks to register:
     --round
     --pillar_90
@@ -19,6 +19,7 @@ function register_rockset(name, recipe_cobble, recipe_stone, image)
         description = "Round " .. name .. " Rock",
         drawtype = "mesh",
         mesh = "round.obj",
+        pointable = false,
         sunlight_propagates = true,
         paramtype2 = "facedir",
         collision_box = {
@@ -47,6 +48,7 @@ function register_rockset(name, recipe_cobble, recipe_stone, image)
         description = name .. " Pillar 90",
         drawtype = "mesh",
         mesh = "pillar_90.obj",
+        pointable = false,
         sunlight_propagates = true,
         paramtype2 = "facedir",
         collision_box = {
@@ -75,6 +77,7 @@ function register_rockset(name, recipe_cobble, recipe_stone, image)
         description = name .. " Pillar 45",
         drawtype = "mesh",
         mesh = "pillar_45.obj",
+        pointable = false,
         sunlight_propagates = true,
         paramtype2 = "facedir",
         collision_box = {
@@ -104,6 +107,7 @@ function register_rockset(name, recipe_cobble, recipe_stone, image)
         description = "Large Flat ".. name .. " Rock",
         drawtype = "mesh",
         mesh = "large_flat.obj",
+        pointable = false,
         sunlight_propagates = true,
         paramtype2 = "facedir",
         collision_box = {
@@ -133,6 +137,7 @@ function register_rockset(name, recipe_cobble, recipe_stone, image)
         description = "Flat ".. name .. " Rock",
         drawtype = "mesh",
         mesh = "flat.obj",
+        pointable = false,
         sunlight_propagates = true,
         paramtype2 = "facedir",
         collision_box = {
@@ -160,6 +165,7 @@ function register_rockset(name, recipe_cobble, recipe_stone, image)
         description =  name .. " Glove Rock",
         drawtype = "mesh",
         mesh = "glove.obj",
+        pointable = false,
         sunlight_propagates = true,
         paramtype2 = "facedir",
         collision_box = {
@@ -189,6 +195,7 @@ function register_rockset(name, recipe_cobble, recipe_stone, image)
         description =  name .. " Spike",
         drawtype = "mesh",
         mesh = "spike.obj",
+        pointable = false,
         sunlight_propagates = true,
         paramtype2 = "facedir",
         collision_box = {
@@ -219,6 +226,7 @@ function register_rockset(name, recipe_cobble, recipe_stone, image)
         description =  name .. " Stub",
         drawtype = "mesh",
         mesh = "stub.obj",
+        pointable = false,
         sunlight_propagates = true,
         paramtype2 = "facedir",
         collision_box = {
